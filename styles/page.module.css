@@ -1,0 +1,53 @@
+.container {
+  padding-top: 50px;
+  min-height: 100vh;
+  color: white;
+}
+
+.container > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: 900;
+  letter-spacing: 10px;
+}
+
+.backgroundContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+}
+
+.videos {
+  width: fit-content;
+  margin: auto;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.videos > *:last-child {
+  grid-column: 1/3;
+}
+
+@media (max-width: 900px) {
+  .videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    text-align: center;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .videos > * {
+    width: 100%;
+  }
+}
